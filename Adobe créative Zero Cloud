@@ -1,0 +1,75 @@
+https://helpx.adobe.com/fr/acrobat/desktop/get-started/access-the-app/install-acrobat-enterprise.html
+
+https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html
+
+https://helpx.adobe.com/fr/enterprise/kb/acrobat-64-bit-for-enterprises.html
+
+Cher/Chère pierre-jean Lacroix, 
+Un ingénieur du support Adobe a ajouté de nouvelles remarques à votre dossier E-002239449. 
+•	Bonjour Pierre-Jean, j'espère que vous allez bien.
+
+Je vous recontacte suite à notre session Teams au cours de laquelle nous avons abordé plusieurs points liés à vos questions et préoccupations.
+
+Je vais commencer par vous parler à nouveau d'Acrobat Unified, qui vous permet d'utiliser les trois versions d'Acrobat avec une seule installation.
+
+Acrobat s'ouvre toujours en tant que Reader et se comporte comme un Reader classique, à l'exception du fait qu'il n'invite pas l'utilisateur à se connecter ni à mettre à niveau l'application.
+
+L'utilisateur peut toutefois se connecter à tout moment et, si une licence Standard ou Pro lui est attribuée, il débloquera les fonctionnalités correspondantes.
+
+Pour créer le programme d'installation Unified, vous devez commencer par télécharger Acrobat à partir d'ici :
+https://helpx.adobe.com/fr/acrobat/desktop/get-started/access-the-app/install-acrobat-enterprise.html
+Vous devez également télécharger et installer Acrobat Wizard, disponible ici :
+https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html
+
+Pour les étapes en détaille du Wizard que vont vous permettre d'implémenter les modifications suivantes : 
+1. Utilisez Acrobat 64 bits en mode lecture seule : 
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockDown 
+a. Ajoutez la valeur de chaîne suivante : 
+“bIsSCReducedModeEnforcedEx”=dword:00000001 
+b. Créez la clé suivante : 
+cIPM 
+Ajoutez ensuite la valeur de chaîne suivante sous cette clé : 
+“bDontShowMsgWhenViewingDoc”=dword:00000000 
+
+Les entrées de registre ci-dessus garantissent qu'Acrobat s'exécutera sur une machine Windows 64 bits en tant qu'Adobe Reader. De plus, Adobe Reader s'exécutera sans publicité. 
+
+Comme nous l'avons vu, vous pouvez ajouter ces clés de registre sur l'ACW dans l'onglet "Registry" ou vous pouvez changer d'autres options sur les autres onglets comme par exemple : 
+
+1. "Installation Options" 
+a. il existe certaines options pour supprimer les versions précédentes (j'exécuterais toujours l'outil AcroCleaner) 
+b. il existe une option pour exécuter l'installation en mode silencieux (je crois qu'Intune fait de même) 
+c. dans les options de langues de l'application, vous pouvez choisir d'utiliser la langue du système d'exploitation ou de spécifier la langue 
+d. "Suppress sign-in in Acrobat", pour désactiver la connexion obligatoire 
+e. "Add virtual environment support", pour permettre l'utilisation sur des machines virtuelles 
+
+2. Registry 
+a. dans l'onglet "Destination computer", vous pouvez ajouter les clés de registre que j'ai partagées ci-dessus 
+
+3. Online Services and Features 
+a. "Disable upsell pour empêcher la proposition de mise à niveau 
+b. "Disable sign-out" pour garder les utilisateurs connectés (peut être utile pour certains utilisateurs, mais pas pour les cas où vous souhaitez basculer entre Reader et Pro) 
+
+Une fois que vous avez choisi les options que vous souhaitez activer ou désactiver, il vous suffit d'enregistrer le fichier et de faire une copie du dossier. 
+
+Remarque : conservez un fichier txt dans le dossier et ajoutez vos notes expliquant ce que vous avez modifié pour référence ultérieure.
+
+Nous avons finalement discuté à propos des produits (autres qu'Acrobat) qui ne permettent pas l'utilisation du stockage cloud. Pour cela, vous devrez discuter avec votre responsable de compte Adobe de votre éligibilité, de la disponibilité et du prix des produits 0Go.
+
+C'était un plaisir d'avoir pu vous aider! 
+Vous allez recevoir une courte enquête concernant votre interaction avec notre support, n'hésitez pas à nous faire part de votre satisfaction ! Veuillez sélectionner une note comprise entre 5 et 1 étoiles: 5 étoiles signifie que vous avez été très satisfait, 1 étoile indique une expérience très insatisfaisante. 
+
+Nous allons maintenant procéder à la clôture de votre dossier. Vous pourrez le rouvrir sous 14 jours si nécessaire. 
+Vous pourrez faire cela dans votre admin console dans la section Support (https://helpx.adobe.com/fr/enterprise/using/support-for-enterprise.html) 
+
+Merci de nous aider à continuer à offrir un excellent service d'assistance et merci encore pour votre confiance ! 
+
+Je vous souhaite une très belle journée. 
+Cordialement, 
+Helder Martinho | Service Desk EMEA ENT Standard Support | French Market | Teleperformance for Adobe | DMe ICX 
+tel80588@adobe.com
+Vous pouvez afficher ou mettre à jour votre dossier en cliquant sur l’ID de dossier ci-dessous. 
+Les détails du dossier sont les suivants : 
+•	ID de dossier : E-002239449
+•	Titre du dossier : Questions sur Acrobat
+Nous sommes impatients de travailler avec vous.
+L’équipe de support Enterprise d’Adobe 
